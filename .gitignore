@@ -32,7 +32,6 @@ sqlnet.log
 test/test_schema.db
 *test_schema.db
 .idea
-/Pipfile*
 /.pytest_cache/
 /pip-wheel-metadata/
 /.vscode/
