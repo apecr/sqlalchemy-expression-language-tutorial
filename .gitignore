@@ -38,3 +38,4 @@ test/test_schema.db
 /.ipynb_checkpoints/
 *.ipynb
 /querytest.db
+:memory
