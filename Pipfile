@@ -6,9 +6,13 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 coverage = "*"
+black = "*"
 
 [packages]
 sqlalchemy = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

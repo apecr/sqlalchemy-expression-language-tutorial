@@ -6,7 +6,8 @@
   "scripts": {
     "test": "python -m pytest -vv --capture=tee-sys",
     "coverage": "coverage run --source . -m pytest && coverage report && coverage xml -o coverage-reports/coverage.xml",
-    "sonar": "sonar-scanner"
+    "sonar": "sonar-scanner",
+    "lint":  "black ."
   },
   "repository": {
     "type": "git",
