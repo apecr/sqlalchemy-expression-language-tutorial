@@ -11,7 +11,8 @@ logger = logging.getLogger()
 
 @pytest.fixture(scope="module")
 def conf_tables():
-    #setup = create_tables_test()
+    # setup = create_tables_test()
+    logger.info("Creating tables")
     yield create_tables()
     logger.info("Teardown tests")
     delete_tables()

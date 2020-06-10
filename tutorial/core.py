@@ -23,7 +23,7 @@ against the database.
 
 
 def get_test_engine() -> Engine:
-    return create_engine("sqlite:///:memory", echo=True)
+    return create_engine("sqlite:///:memory", echo=False)
 
 
 def users_table(meta) -> Table:
