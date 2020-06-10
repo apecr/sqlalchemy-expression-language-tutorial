@@ -39,3 +39,4 @@ test/test_schema.db
 *.ipynb
 /querytest.db
 :memory
+

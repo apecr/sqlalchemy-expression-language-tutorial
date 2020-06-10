@@ -1,0 +1,22 @@
+{
+  "name": "sqlalchemy-expression-language-tutorial",
+  "version": "1.0.0",
+  "description": "From this [link][1].",
+  "main": "index.js",
+  "scripts": {
+    "test": "python -m pytest -vv --capture=tee-sys",
+    "coverage": "coverage run --source . -m pytest && coverage report && coverage xml -o coverage-reports/coverage.xml",
+    "sonar": "sonar-scanner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apecr/sqlalchemy-expression-language-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apecr/sqlalchemy-expression-language-tutorial/issues"
+  },
+  "homepage": "https://github.com/apecr/sqlalchemy-expression-language-tutorial#readme"
+}
