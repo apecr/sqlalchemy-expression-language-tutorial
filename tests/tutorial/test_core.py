@@ -43,14 +43,17 @@ def test_insert_addresses(conf_tables):
 
 def test_select_users(conf_tables):
     metadata, users, addresses = conf_tables
-    result = get_users(users)
-    assert result.fetchall()[0][1] == "jack"
+    result: ResultProxy = get_users(users)
+    final_res = result.fetchall()
+    assert final_res[0][1] == "jack"
+    assert len(final_res) == 1
     row = get_users(users).fetchone()
     assert row["name"] == "jack"
 
 
 def test_select_specific_columns(conf_tables):
     users, addresses = conf_tables[1:]
-    result = select_some_columns(users, addresses)
-    logger.info(result.fetchall())
+    result = select_some_columns(users, addresses).fetchall()
+    logger.info(result)
     assert result is not None
+    assert len(result) == 2
