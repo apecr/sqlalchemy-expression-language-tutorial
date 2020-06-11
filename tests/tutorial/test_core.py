@@ -9,7 +9,8 @@ from tutorial.core import (
     get_user_insert,
     execute_insert_many_addresses,
     get_users,
-    select_some_columns, )
+    select_some_columns,
+)
 
 
 def test_create_tables(conf_tables):

@@ -8,7 +8,8 @@ from sqlalchemy import (
     String,
     ForeignKey,
     Sequence,
-    select, text,
+    select,
+    text,
 )
 from sqlalchemy.engine import Engine, ResultProxy
 
@@ -89,19 +90,23 @@ def get_users(users):
 
 def select_some_columns(users, addresses):
     conn = get_test_engine().connect()
-    s = select([users.c.id, users.c.name, users.c.fullname, addresses.c.email_address]).where(
-        users.c.id == addresses.c.user_id
-    )
+    s = select(
+        [users.c.id, users.c.name, users.c.fullname, addresses.c.email_address]
+    ).where(users.c.id == addresses.c.user_id)
     return conn.execute(s)
 
 
 def delete_tables():
-    delete_users = text("""
+    delete_users = text(
+        """
     DELETE FROM users
-    """)
-    delete_addresses = text("""
+    """
+    )
+    delete_addresses = text(
+        """
     DELETE FROM addresses
-    """)
+    """
+    )
     conn = get_test_engine().connect()
     conn.execute(delete_users)
     conn.execute(delete_addresses)
