@@ -4,18 +4,20 @@ python:
 after_success:
   coveralls
 
+dist: xenial
+sudo: required
+
 addons:
   sonarcloud:
     organization: "apecr-github"
-jdk:
-  - oraclejdk8
 
 install:
   - pip install pipenv
   - pipenv install --dev
 script:
   - python -m pytest -vv --capture=tee-sys
-  - coverage run --source . -m pytest
+  - npm run coverage
+  - coverage run --source . -m pytest && coverage report --omit=tests/*
   - sonar-scanner
 
 cache:
