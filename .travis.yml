@@ -3,6 +3,16 @@ python:
   - "3.7"
 after_success:
   coveralls
+
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "apecr-github"
+jdk:
+  - oraclejdk8
+
 install:
   - pip install pipenv
   - pipenv install --dev
@@ -10,3 +20,7 @@ script:
   - python -m pytest -vv --capture=tee-sys
   - coverage run --source . -m pytest
   - sonar-scanner
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
