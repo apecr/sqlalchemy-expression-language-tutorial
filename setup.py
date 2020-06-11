@@ -22,9 +22,19 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
+    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*", "*/tests/*"]),
     include_package_data=True,
-    install_requires=["sqlalchemy"]
+    install_requires=["sqlalchemy==1.3.17"],
+    extras_require={
+        'dev': [
+            'pytest',
+            'coverage',
+            'black',
+            'coveralls',
+            'bumpversion',
+            'twine',
+        ]
+    }
 )
 
 
