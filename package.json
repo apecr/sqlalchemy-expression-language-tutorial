@@ -1,11 +1,11 @@
 {
   "name": "sqlalchemy-expression-language-tutorial",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "From this [link][1].",
   "main": "index.js",
   "scripts": {
     "test": "python -m pytest -vv --capture=tee-sys",
-    "coverage": "coverage run --source . -m pytest && coverage report && coverage xml -o coverage-reports/coverage.xml",
+    "coverage": "coverage run --source . -m pytest && coverage report --omit=tests/*.py && coverage xml -o coverage-reports/coverage.xml",
     "sonar": "sonar-scanner",
     "lint":  "black ."
   },

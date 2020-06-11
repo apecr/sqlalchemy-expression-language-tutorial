@@ -16,3 +16,9 @@ python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
+
+[scripts]
+test = "python -m pytest -vv --capture=tee-sys"
+linting = "black ."
+coverage = "./scripts/coverage.sh"
+sonar = "sonar-scanner"
