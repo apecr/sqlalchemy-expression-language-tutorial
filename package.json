@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "python -m pytest -vv --capture=tee-sys",
-    "coverage": "coverage run --source . -m pytest && coverage report --omit=tests/*.py && coverage xml -o coverage-reports/coverage.xml",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "coverage": "coverage run --source . -m pytest tests/ && coverage report --omit=tests/*.py && coverage xml -o coverage-reports/coverage.xml",
+    "coveralls": "cat ./coverage-reports/coverage.xml | ./node_modules/.bin/coveralls",
     "sonar": "sonar-scanner",
-    "lint":  "black ."
+    "lint": "black ."
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/apecr/sqlalchemy-expression-language-tutorial/issues"
   },
-  "homepage": "https://github.com/apecr/sqlalchemy-expression-language-tutorial#readme"
+  "homepage": "https://github.com/apecr/sqlalchemy-expression-language-tutorial#readme",
+  "devDependencies": {
+    "coveralls": "^3.1.0"
+  }
 }

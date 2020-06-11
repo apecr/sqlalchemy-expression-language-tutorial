@@ -41,4 +41,5 @@ test/test_schema.db
 :memory
 
 .scannerwork
+node_modules
 
