@@ -4,9 +4,6 @@ python:
 after_success:
   coveralls
 
-dist: trusty
-sudo: required
-
 addons:
   sonarcloud:
     organization: "apecr-github"
