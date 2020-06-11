@@ -2,7 +2,7 @@ language: python
 python:
   - "3.7"
 after_success:
-  coveralls
+  coveralls --base_dir tutorial
 
 dist: xenial
 sudo: required
