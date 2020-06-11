@@ -6,6 +6,7 @@
   "scripts": {
     "test": "python -m pytest -vv --capture=tee-sys",
     "coverage": "coverage run --source . -m pytest && coverage report --omit=tests/*.py && coverage xml -o coverage-reports/coverage.xml",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "sonar": "sonar-scanner",
     "lint":  "black ."
   },
