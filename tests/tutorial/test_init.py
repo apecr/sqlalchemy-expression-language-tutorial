@@ -2,7 +2,7 @@ import tutorial
 
 
 def test_get_version():
-    assert tutorial.__version__ == "0.0.1"
+    assert tutorial.__version__ == "0.1.0"
 
 
 def test_get_name():
