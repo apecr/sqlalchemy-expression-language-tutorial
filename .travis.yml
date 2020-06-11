@@ -15,9 +15,9 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - python -m pytest -vv --capture=tee-sys
+  - pipenv run test
   - pipenv run coverage
-  - sonar-scanner
+  - pipenv run sonar
 
 cache:
   directories:
