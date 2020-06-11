@@ -16,8 +16,7 @@ install:
   - pipenv install --dev
 script:
   - python -m pytest -vv --capture=tee-sys
-  - npm run coverage
-  - coverage run --source . -m pytest && coverage report --omit=tests/*
+  - pipenv run coverage
   - sonar-scanner
 
 cache:
