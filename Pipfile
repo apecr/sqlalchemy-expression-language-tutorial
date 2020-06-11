@@ -8,6 +8,7 @@ pytest = "*"
 coverage = "*"
 black = "*"
 coveralls = "*"
+bumpversion = "*"
 
 [packages]
 sqlalchemy = "*"
